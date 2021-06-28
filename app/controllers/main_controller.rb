@@ -5,13 +5,13 @@ class MainController < ApplicationController
   end
 
   def process_form
+    flash[:msg] = "Thanks for submitting this form! You have submitted this form #{@@counter} times now."
     @@user = user_params
     @@counter += 1
     redirect_to '/result'
   end
 
   def survey_result
-    flash[:msg] = "Thanks for submitting this form! You have submitted this form #{@@counter} times now."
     @user = @@user
   end
 

@@ -1,5 +1,7 @@
 <div class="container">
-    <div class="col-lg-6 offset-lg-3 alert alert-success mt-5" role="alert"><%= flash["msg"] %></div>
+    <% if flash[:msg] != nil%>
+        <div class="col-lg-6 offset-lg-3 alert alert-success mt-5" role="alert"><%= flash[:msg] %></div>
+    <% end %>
     <div class="col-lg-6 offset-lg-3 col-md-12 border border-dark rounded p-5 mt-3">
         <h5 class="text-center mb-5">Submitted Information</h5>
         <div class="row lg-3">
