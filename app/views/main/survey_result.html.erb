@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="col-lg-6 offset-lg-3 alert alert-success mt-5" role="alert"><%= flash["msg"] %></div>
+    <div class="col-lg-6 offset-lg-3 col-md-12 border border-dark rounded p-5 mt-3">
+        <h5 class="text-center mb-5">Submitted Information</h5>
+        <div class="row lg-3">
+            <p class="col-lg-6">Name:</p>
+            <p class="col-lg-6 fw-bold"><%= @user["name"] %></p>
+        </div>
+        <div class="row lg-3">
+            <p class="col-lg-6">Dojo Location:</p>
+            <p class="col-lg-6 fw-bold"><%= @user["dojo_location"] %></p>
+        </div>
+        <div class="row lg-3">
+            <p class="col-lg-6">Favorite Language:</p>
+            <p class="col-lg-6 fw-bold"><%= @user["favorite_language"] %></p>
+        </div>
+        <div class="row lg-3">
+            <p class="col-lg-6">Comment:</p>
+            <p class="col-lg-6 fw-bold"><%= @user["comment"] %></p>
+        </div>
+        <div class="mb-5">
+            <a href="/" class="btn btn-primary float-end">Go Back</a>
+        </div>
+    </div>
+</div>

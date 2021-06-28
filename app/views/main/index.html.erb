@@ -1,0 +1,41 @@
+<div class="container">
+    <form action="process" method="POST" class="col-lg-6 offset-lg-3 col-md-12 border border-dark rounded p-5 mt-5">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <div class="row mb-3">
+            <label for="name" class="col-sm-4 col-form-label">Your Name:</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="name" name=user[name] autofocus>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-4 col-form-label">Dojo Location:</label>
+            <div class="col-sm-8">
+                <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="user[dojo_location]">
+                    <option value="San Andreas">San Andreas</option>
+                    <option value="Los Santos">Los Santos</option>
+                    <option value="Vice City">Vice City</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-4 col-form-label">Favorite Language:</label>
+            <div class="col-sm-8">
+                <select class="form-select form-select mb-3" aria-label=".form-select-lg example" name="user[favorite_language]">
+                    <option value="Ruby">Ruby</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Python">Python</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="comment" class="col-sm-12 col-form-label">Comment (Optional):</label>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="comment" style="height: 100px" name="user[comment]"></textarea>
+            </div>
+        </div>
+        <div class="mb-5">
+            <button type="submit" class="btn btn-primary float-end">Submit</button>
+        </div>
+    </form>
+</div>
